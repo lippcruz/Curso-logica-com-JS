@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de variaveis, alert, prompt</title>
+</head>
+<body>
+    <h1>Curso - Lógica de programação com Javascript</h1>
+    <h2>Exercício</h2>
+    <p>Peça para o usuário digitar dois numeros e mostre a soma, subtração, divisão e multiplicação.</p>
+    <p><em>Em pesquisa descobri que <mark>parseInt()</mark> e <mark>parseFloat()</mark> convertem uma string em numero inteiro ou real. <br> Também descobri que assim como na matemática os <mark>(parentesis)</mark> dão prioridade a uma operação.</em>></p>
+
+    <script>
+        // parseInt() transforma a string capturada em promp num numero inteiro
+        // parseFloat() transforma a string em numero real // "força a conversão"
+        var numero1 = parseInt(prompt("Digite um numero qualquer:"));
+        var numero2 = parseInt(prompt("Digite um segundo numero:"));
+
+        // como na matematica os (parentesis) informam ao codigo qual operaçao deve ser realizada primeiro.
+        alert("A soma desses dois numeros é: " + (numero1 + numero2)); 
+        alert("A subtração desses dois numeros é: " + (numero1 - numero2));
+        alert("A divisão desses dois numeros é: " + (numero1 / numero2));
+        alert("A multiplicação desses dois numeros é: " + (numero1 * numero2));
+        
+    </script>
+</body>
+</html>
