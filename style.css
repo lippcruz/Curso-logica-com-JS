@@ -2,4 +2,18 @@
 body{font-family: sans-serif; background-color: var(--bg-color); color: var(--text-color);}
 strong{ background-color: var(--mark-color); color: var(--text-color);}
 mark{ background-color: var(--mark-color); color: var(--text-color);}
-button{ padding: 10px 15px; margin-right: 5px; background-color: var(--mark-color); color: var(--text-color); border-radius: 5px; border-style: none; font-weight: 600;}
+button{ padding: 10px 15px; background-color: var(--mark-color); color: var(--text-color); border-radius: 5px; border-style: none; font-weight: 600;}
+
+
+#calculadora{
+    padding: 20px 15px;
+    display:inline-block;
+    border: 1px solid var(--mark-color);
+    border-radius: 5px;
+}
+
+#displayCalc {
+    padding: 5px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}

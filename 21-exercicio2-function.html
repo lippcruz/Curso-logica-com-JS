@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício Funções</title>
+</head>
+<body>
+    <h1>Curso - Lógica de programação com Javascript</h1>
+    <h2>Exercício</h2>
+    <p>Crie uma função que é ativada ao clicar no botão, solicita um numero para o usuário e imprime a tabuada desse numero na tela.</p>
+ 
+    <div id="calculadora">
+        <div id="displayCalc"></div><br>
+        <button onclick="somar()"><b>+</b></button>
+        <button onclick="subtrair()"><b>-</b></button>
+        <button onclick="dividir()"><b>÷</b></button>
+        <button onclick="multiplicar()"><b>x</b></button>
+        <button onclick="clearCalc()"><b>C</b></button>
+    </div>
+
+    <script>
+        var displayCalc = document.querySelector("#displayCalc");
+        var n1 = parseFloat(prompt("Digite um numero: "));
+
+        displayCalc.innerHTML = n1;
+
+        var varCalc = "";
+        
+        function somar(){
+            var n2 = parseFloat(prompt("Digite o segundo número"));
+            n2 = n1 + " + " + n2 + " = " + (n1 + n2);
+            displayCalc.innerHTML = n2;
+        } 
+
+        function subtrair(){
+            var n2 = parseFloat(prompt("Digite o segundo número"));
+            varCalc += n1 + " - " + n2 + " = " + (n1 - n2);
+            displayCalc.innerHTML = varCalc;
+        } 
+
+        function dividir(){
+            var n2 = parseFloat(prompt("Digite o segundo número"));
+            varCalc += n1 + " ÷ " + n2 + " = " + (n1 / n2);
+            displayCalc.innerHTML = varCalc;
+        } 
+
+        function multiplicar(){
+            var n2 = parseFloat(prompt("Digite o segundo número"));
+            varCalc += n1 + " x " + n2 + " = " + (n1 *  n2);
+            displayCalc.innerHTML = varCalc;
+        } 
+
+        function clearCalc(){
+            var varCalc = "";
+            displayCalc.innerHTML = varCalc;
+        }
+    </script>
+</body>
+</html>
