@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício Funções</title>
+</head>
+<body>
+    <h1>Curso - Lógica de programação com Javascript</h1>
+    <h2>Exercício</h2>
+    <p>Crie uma função que é ativada ao clicar no botão, solicita um numero para o usuário e imprime a tabuada desse numero na tela.</p>
+    
+    <button onclick="geraTabuada10()">Gerar tabuada até 10</button> 
+    <button onclick="geraTabuada100()">Gerar tabuada até 100</button> 
+    <button onclick="geraTabuada1000()">Gerar tabuada até 1000</button><br><br>
+    <div id="tabuada"></div>
+
+    <script>
+        var tabuada = document.querySelector("#tabuada");
+        function geraTabuada10(){
+            var numero = parseInt(prompt("Digite um numero:"));
+            var imprimeNumero = ""
+            for (i = 0; i <= 10; i++){
+                imprimeNumero += numero + " x " + i + " = " + (i * numero) + "<br>";
+            }
+            tabuada.innerHTML = imprimeNumero;
+        } 
+
+        function geraTabuada100(){
+            var numero = parseInt(prompt("Digite um numero:"));
+            var imprimeNumero = ""
+            for (i = 0; i <= 100; i++){
+                imprimeNumero += numero + " x " + i + " = " + (i * numero) + "<br>";
+            }
+            tabuada.innerHTML = imprimeNumero;
+        } 
+        
+        function geraTabuada1000(){
+            var numero = parseInt(prompt("Digite um numero:"));
+            var imprimeNumero = ""
+            for (i = 0; i <= 1000; i++){
+                imprimeNumero += numero + " x " + i + " = " + (i * numero) + "<br>";
+            }
+            tabuada.innerHTML = imprimeNumero;
+        } 
+        
+    </script>
+</body>
+</html>
