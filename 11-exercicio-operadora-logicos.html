@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Operadores lógicos</title>
+</head>
+<body>
+    <h1>Curso - Lógica de programação com Javascript</h1>
+    <h2>Exercício</h2>
+    <p>Pedir pro usuario digitar duas notas e mostrar uma mensagem de aprovação ou reprovação. A nota de corte é 5, contudo se qualquer nota for zero o aluno é reprovado automaticamente.</p>
+
+    <script>
+        var n1 = parseFloat(prompt("Digite a primeira nota:"));
+        var n2 = parseFloat(prompt("Digite a segunda nota:"));
+        var media = (n1 + n2) /2;
+
+        if(n1 === 0 || n2 === 0 || media <= 5){
+            alert("Aluno reprovado!");
+        }
+        if (n1 != 0 && n2 != 0 && media >= 5){
+            alert("Aluno aprovado!");
+
+        }
+
+
+    </script>
+</body>
+</html>
