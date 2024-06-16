@@ -17,45 +17,40 @@
         <button onclick="subtrair()"><b>-</b></button>
         <button onclick="dividir()"><b>÷</b></button>
         <button onclick="multiplicar()"><b>x</b></button>
-        <button onclick="clearCalc()"><b>C</b></button>
     </div>
 
     <script>
-        var displayCalc = document.querySelector("#displayCalc");
+        
         var n1 = parseFloat(prompt("Digite um numero: "));
 
-        displayCalc.innerHTML = n1;
+        function escrever(){
+            var displayCalc = document.querySelector("#displayCalc");
+            displayCalc.innerHTML = n1;
 
-        var varCalc = "";
-        
+        }
+        escrever();
+
         function somar(){
             var n2 = parseFloat(prompt("Digite o segundo número"));
-            n2 = n1 + " + " + n2 + " = " + (n1 + n2);
-            displayCalc.innerHTML = n2;
+            n1 = n1 + n2;
+            escrever();
         } 
 
         function subtrair(){
             var n2 = parseFloat(prompt("Digite o segundo número"));
-            varCalc += n1 + " - " + n2 + " = " + (n1 - n2);
-            displayCalc.innerHTML = varCalc;
+            n1 = n1 - n2;
+            escrever();
         } 
-
         function dividir(){
             var n2 = parseFloat(prompt("Digite o segundo número"));
-            varCalc += n1 + " ÷ " + n2 + " = " + (n1 / n2);
-            displayCalc.innerHTML = varCalc;
+            n1 = n1 / n2;
+            escrever();
         } 
-
         function multiplicar(){
             var n2 = parseFloat(prompt("Digite o segundo número"));
-            varCalc += n1 + " x " + n2 + " = " + (n1 *  n2);
-            displayCalc.innerHTML = varCalc;
+            n1 = n1 * n2;
+            escrever();
         } 
-
-        function clearCalc(){
-            var varCalc = "";
-            displayCalc.innerHTML = varCalc;
-        }
     </script>
 </body>
 </html>
