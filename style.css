@@ -1,1 +1,5 @@
-body{font-family: sans-serif;}
+:root{ --bg-color: #121214; --text-color:#E1E1E6; --mark-color: #5500CC;}
+body{font-family: sans-serif; background-color: var(--bg-color); color: var(--text-color);}
+strong{ background-color: var(--mark-color); color: var(--text-color);}
+mark{ background-color: var(--mark-color); color: var(--text-color);}
+button{ padding: 10px 15px; margin-right: 5px; background-color: var(--mark-color); color: var(--text-color); border-radius: 5px; border-style: none; font-weight: 600;}
