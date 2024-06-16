@@ -14,16 +14,20 @@
         var n1 = parseInt(prompt("Digite um numero: "));
         var n2 = parseInt(prompt("Digite outro numero: "));
         
-        if(n1 === n2){
-            alert("Empate!");
-        } else{
-            var nSorteado = parseInt(Math.random() * 2 ); 
-            if((nSorteado === 0 && n1 < n2) || (nSorteado === 1 && n1 > n2)){
-                alert("Ganhou o primeiro jogador!");
-            } else{
-                alert("Ganhou o segundo jogador!");
-            }
-            }
+        switch(n1 === n2){
+            case true:
+                alert("Empate!");
+            break;
+
+            case false:
+                var nSorteado = parseInt(Math.random() * 2 ); 
+                if(nSorteado === 0 && n1 < n2 || nSorteado === 1 && n1 > n2){
+                    alert("Ganhou o primeiro jogador!");
+                } else{
+                    alert("Ganhou o segundo jogador!");
+                };
+            break;    
+        }
 
 
     </script>
