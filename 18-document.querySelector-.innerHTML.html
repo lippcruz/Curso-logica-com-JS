@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>document.querySelector, .innerHTML</title>
+</head>
+<body>
+    <h1>Curso - Lógica de programação com Javascript</h1>
+    <h2>document.</h2>
+    <p>Acessa uma informaçao no HTML</p>
+    <h2>querySelector</h2>
+    <p>Referencia um ID ou classe no codigo JS <br> ex: var i = document.querySelector("#id");</p>
+    <h2>.innerHTML</h2>
+    <p>Escreve no codigo HTML</p>
+
+    <div id="saida"></div>
+
+    <script>
+        var saida = document.querySelector("#saida");
+        mensagem = "";
+        for (var i = 0; i <= 10; i++){
+            mensagem += i + "<br>";
+        }
+
+        saida.innerHTML = mensagem;
+    </script>
+
+</body>
+</html>
