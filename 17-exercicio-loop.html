@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>document.write, Loop while</title>
+</head>
+<body>
+    <h1>Curso - Lógica de programação com Javascript</h1>
+    <h2>Exercício</h2>
+    <p>Crie um loop que mostre todos os anos bissexto partindo de 1004. <br><i>Para calcularmos se um ano é bissexto utilizamos uma regra bastante prática, se o ano for não multiplo de 100 ou multiplo de 400 é bissexto.</i></p>
+
+    <script>
+        var i = 1004
+        
+        while (i <= 2024){
+            if(!(i % 100 == 0) || (i % 400 == 0)){
+                document.write(i + "<br>");
+            }
+            i += 4;
+        }
+
+    </script>
+
+</body>
+</html>
