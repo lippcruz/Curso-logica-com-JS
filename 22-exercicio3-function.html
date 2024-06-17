@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício Funções</title>
+</head>
+<body>
+    <h1>Curso - Lógica de programação com Javascript</h1>
+    <h2>Exercício</h2>
+    <p>Crie uma função que é ativada ao clicar no botão, solicita um numero para o usuário e imprime a tabuada desse numero na tela.</p>
+ 
+    <div id="calculadora">
+        <div id="displayCalc"></div><br>
+        <button onclick="calcular('+')"><b>+</b></button>
+        <button onclick="calcular('-')"><b>-</b></button>
+        <button onclick="calcular('/')"><b>÷</b></button>
+        <button onclick="calcular('*')"><b>x</b></button>
+    </div>
+
+    <script>
+        
+        var n1 = parseFloat(prompt("Digite um numero: "));
+
+        function escrever(){
+            var displayCalc = document.querySelector("#displayCalc");
+            displayCalc.innerHTML = n1;
+
+        }
+        escrever();
+
+        function calcular(operador){
+            var n2 = parseFloat(prompt("Digite o segundo número"));
+            switch(operador){
+                case '+':
+                    n1 += n2;
+                    break;
+
+                case '-':
+                    n1 -= n2;
+                    break;
+            
+                case '/':
+                    n1 /= n2;
+                    break;
+
+                case '*':
+                    n1 *= n2;
+                    break;
+            }
+            escrever();
+        } 
+    </script>
+</body>
+</html>
