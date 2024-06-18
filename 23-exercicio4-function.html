@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio Funções Javascript</title>
+</head>
+<body>
+    <h1>Ábaco 2.0</h1>
+    <div id="lcd"></div><br>
+    <button onclick="calcula('soma')">+</button>
+    <button onclick="calcula('subtrai')">-</button>
+    <button onclick="calcula('divide')">÷</button>
+    <button onclick="calcula('multiplica')">x</button>
+
+    <script>
+        var n1 = parseFloat(prompt("Digite um número:"));
+        
+        function imprime(){
+            var lcd = document.querySelector("#lcd");
+            lcd.innerHTML = n1;
+        }
+        imprime();
+
+        function calcula(valorCalc){
+            var n2 = parseFloat(prompt('Digite um segundo número:'));
+            switch(valorCalc){
+                case 'soma':
+                    n1 += n2;
+                    break;
+                case 'subtrai':
+                    n1 -= n2;
+                    break;
+                case 'divide':
+                    n1 /= n2;
+                    break;
+                case 'multiplica':
+                    n1 *= n2; 
+                    break;
+            }
+            
+            imprime();
+        }
+    </script>
+</body>
+</html>
