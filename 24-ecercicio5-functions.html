@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Javascript</title>
+</head>
+<body>
+    <h1>Calculadora Javascript</h1>
+    <button onclick="calcula('soma')">+</button>
+    <button onclick="calcula('subtrai')">-</button>
+    <button onclick="calcula('divide')">/</button>
+    <button onclick="calcula('multiplica')">*</button><br><br>
+    <div id="ecra"></div>
+
+    <script>
+        var n1 = parseFloat(prompt("Digite um número::"));
+        var n2 = " ";
+        var operacao = " "; 
+
+        function imprime(){
+            let ecra = document.querySelector("#ecra");
+            ecra.innerHTML = n1;
+        }
+        imprime();
+
+
+        function calcula(operacao){
+            n2 = parseFloat(prompt("Digite outro número:"));
+            if(operacao === 'soma'){
+                n1 += n2;
+            } else if(operacao === 'subtrai'){
+                n1 -= n2;
+            } else if(operacao === 'divide'){
+                n1 /= n2;
+            } else if(operacao === 'multiplica'){
+                n1 *= n2;
+            }
+            
+            imprime();
+        }
+
+    </script>
+    
+</body>
+</html>
