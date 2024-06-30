@@ -11,8 +11,9 @@
     <button onclick="startCalc('soma')">+</button>
     <br><br><div id="tela"></div>
     <script>
-        var n1 = parseFloat(prompt("Digite um número: "));
-        imprime(n1);
+        var n1 = parseFloat(prompt("Digite um numero: "));
+        imprime(n1)
+
 
         function calcula(operador, n1, n2){
             var i = null;
@@ -20,24 +21,27 @@
                 case 'soma': 
                 i = n1 + n2;
                 break;
-            
+            }
             return i;
             }
-            console.log(typeof i);
-            console.log(i);
-        }
-
-        function startCalc(operador, n1, n2){
-            var n2 = parseFloat(prompt("digite um numero: "));
-            var numCalculado = calcula(operador, n1, n2);
-            imprime(numCalculado);
-        }
-
-       
 
         function imprime (msg){
-            var aiDi = document.querySelector("#tela");
-            aiDi.innerHTML = msg;
+            var tela = document.querySelector("#tela");
+            tela.innerHTML = msg;
+            console.log(msg);
+        }
+
+        function startCalc(operador){
+
+            x = n1;
+            var n2 = parseFloat(prompt("Digite outro numero:" )); 
+            if (isNaN(x) || isNaN(n2)){
+                imprime("Digite um número válido: ")
+                return;
+            }
+
+            var numCalculado = calcula(operador, x, n2);
+            imprime(numCalculado);
         }
         
     </script>
