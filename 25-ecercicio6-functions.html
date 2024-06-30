@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions e parametros</h1>
+    <button onclick="startCalc('+')">+</button>
+    <button onclick="startCalc('-')">-</button>
+    <button onclick="startCalc('*')">x</button>
+    <button onclick="startCalc('/')">/</button>
+    <br><br><div id="lcd"></div>
+    <script>
+        var n1 = parseFloat(prompt("Digite um número: "));
+        imprime(n1);
+
+        function startCalc(opLogic, n1){
+            var n2 = parseFloat(prompt("Digite outro número: "));
+            var resultado = calculator(opLogic, n1, n2);
+            imprime(resultado); 
+        }
+
+        function imprime(msg){
+            var printMsg = document.querySelector("#lcd");
+            printMsg.innerHTML = msg;
+        }
+
+        function calculator (operador, num1, num2){
+            var calculo = null;
+            switch(operador){
+                case "+":
+                    num1 += num2;
+                    break;
+                case "-":
+                    num1 -= num2;
+                    break;
+                case "*": 
+                    num1 *= num2;
+                    break;
+                case "/": 
+                    num1 /= num2;
+                    break;            
+            }   
+            return calculo;
+        }
+    </script>
+    
+</body>
+</html>
