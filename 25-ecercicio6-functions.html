@@ -8,40 +8,38 @@
 </head>
 <body>
     <h1>Functions e parametros</h1>
-    <button onclick="startCalc('+')">+</button>
-    <button onclick="startCalc('-')">-</button>
-    <button onclick="startCalc('*')">x</button>
-    <button onclick="startCalc('/')">/</button>
-    <br><br><div id="lcd"></div>
+    <button onclick="startCalc('soma')">+</button>
+    <br><br><div id="tela"></div>
     <script>
         var n1 = parseFloat(prompt("Digite um número: "));
         imprime(n1);
 
-        function startCalc(opLogic, n1){
-            var n2 = parseFloat(prompt("Digite outro número: "));
-            var resultado = calculator(opLogic, n1, n2);
-            imprime(resultado); 
-        }
-
-        function imprime(msg){
-            var printMsg = document.querySelector("#lcd");
-            printMsg.innerHTML = msg;
-        }
-
-        function calculator (operador, num1, num2){
-            var calculo = null;
-            switch(operador){
-                case "+":
-                num1 += num2;
-                    break;
-
-            }   
-            return calculo; 
+        function calcula(operador, n1, n2){
+            var i = null;
+            switch (operador){
+                case 'soma': 
+                i = n1 + n2;
+                break;
             
+            return i;
+            }
+            console.log(typeof i);
+            console.log(i);
         }
 
-        return;
+        function startCalc(operador, n1, n2){
+            var n2 = parseFloat(prompt("digite um numero: "));
+            var numCalculado = calcula(operador, n1, n2);
+            imprime(numCalculado);
+        }
 
+       
+
+        function imprime (msg){
+            var aiDi = document.querySelector("#tela");
+            aiDi.innerHTML = msg;
+        }
+        
     </script>
     
 </body>
