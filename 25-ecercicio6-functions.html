@@ -32,19 +32,20 @@
             var calculo = null;
             switch(operador){
                 case "+":
-                    num1 += num2;
+                calculo = num1 + num2;
                     break;
                 case "-":
-                    num1 -= num2;
+                calculo = num1 - num2;
                     break;
                 case "*": 
-                    num1 *= num2;
+                calculo = num1 * num2;
                     break;
                 case "/": 
-                    num1 /= num2;
-                    break;            
+                calculo = num1 / num2;
+                break;
             }   
-            return calculo;
+            return calculo; 
+            
         }
     </script>
     
