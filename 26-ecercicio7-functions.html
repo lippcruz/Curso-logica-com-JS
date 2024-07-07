@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercícios - Functions e parametros</h1>
+    <p>Peça para o usuario digitar dois numeros que representam os lados de um retangulo e mostre na tela a área total.
+    O código deve ser executado quando a pagina for aberta, e tambem ao clicar em um botao.
+    Crie filtros para evitar dados invalidos.</p>
+
+    <button onclick="startAcao()">Calcular a área</button><br><br>
+    <div id="ecra"></div>
+    
+
+    <script>
+        startAcao();
+
+        function startAcao (){
+            let nCapturado = captura();
+            let imprimeResultado = calculadora(nCapturado);
+            impressora(imprimeResultado);
+            console.log(nCapturado);
+            console.log(imprimeResultado);
+        }
+        
+        function captura (){
+            let altura = parseFloat(prompt("Digite a altura: "));
+            let largura = parseFloat(prompt("Digite a largura"));
+            return [altura, largura];
+        }
+        
+        function calculadora(arr){
+            if ( isNaN(arr[0]) || isNaN(arr[1])){
+                return "Informe somente números!";
+            } else{
+                let resultado = arr[0] * arr[1];
+                return `A área total é de ${resultado} m²`;
+            }
+        }
+        
+        function impressora(print){
+            const ecra = document.querySelector("#ecra");
+            ecra.innerHTML = print;
+        }            
+    </script>
+</body>
+</html>
